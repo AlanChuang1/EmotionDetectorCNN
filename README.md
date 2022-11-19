@@ -1,5 +1,4 @@
-# MLProjectG4
-
+# EMOJI Prediction - Group 4
 
 ## Abstract
 
