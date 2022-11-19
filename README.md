@@ -6,11 +6,11 @@
 Group Members:
 
 
-Alan Chuang
-Daksh Jain
-Sohum Goel
-Arnav Rastogi
-Grisha Bandodkar
+* Alan Chuang
+* Daksh Jain
+* Sohum Goel
+* Arnav Rastogi
+* Grisha Bandodkar
 
 Overview and Approach:
 
