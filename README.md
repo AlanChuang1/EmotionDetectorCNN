@@ -24,5 +24,5 @@ The dataset contains images of faces that are 48x48 pixel grayscale and centered
 
 ## Data Exploration
 
-There are 4,254 observations in the dataset, with 1774 happy observations, 1233 neutral observations, and 1247 sad observations. Each “observation”, or image file, is a 48x48 pixel-sized grayscale image of expressions on faces. Sizes are all standardized, so they don’t need to be cropped or normalized. 
+There are 4,254 observations in the dataset, with 1774 happy observations, 1233 neutral observations, and 1247 sad observations. Each “observation”, or image file, is a 48x48 pixel-sized grayscale image of expressions on faces. Sizes are all standardized, so they don’t need to be cropped or normalized. However, some images need to be flipped horizontally, and some need to be rescaled, which can be accomplished through keras preprocessing (ImageDataGenerator).
 
