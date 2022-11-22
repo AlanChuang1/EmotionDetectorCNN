@@ -4,12 +4,13 @@
 
 Group Members:
 
-
-* Alan Chuang
-* Daksh Jain
-* Sohum Goel
-* Arnav Rastogi
-* Grisha Bandodkar
+| Member Name  | GitHub Username |
+| ------------- | ------------- |
+| Alan Chuang  | Content Cell  |
+| Daksh Jain  | Content Cell  |
+| Sohum Goel  | Content Cell  |
+| Arnav Rastogi  | Content Cell  |
+| Grisha Bandodkar  | Content Cell  |
 
 Overview and Approach:
 
