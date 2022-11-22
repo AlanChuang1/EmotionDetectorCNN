@@ -6,11 +6,11 @@ Group Members:
 
 | Member Name  | GitHub Username |
 | ------------- | ------------- |
-| Alan Chuang  | Content Cell  |
+| Alan Chuang  | AlanChuang1  |
 | Daksh Jain  | Content Cell  |
-| Sohum Goel  | Content Cell  |
-| Arnav Rastogi  | Content Cell  |
-| Grisha Bandodkar  | Content Cell  |
+| Sohum Goel  | SohumGoel  |
+| Arnav Rastogi  | Arnav33R |
+| Grisha Bandodkar  | grishaab |
 
 Overview and Approach:
 
