@@ -1,8 +1,8 @@
-# Emoji Prediction Using CNN - Group 4 - ECS 171 FQ 2022
+# Emotion Prediction Using CNN - Group 4 - ECS 171 FQ 2022
 
 Group Project for ECS 171, Fall Quarter 2022, at UC Davis under Dr. Solares.
 
-Below is a link to our entire project notebook in Google Colab. We also have smaller notebooks for each major section of our project located throughout this write-up
+Below is a link to our entire project notebook in Google Colab. We also have code blocks for certain sections located throughout this write-up
 
 [![Open Entire Project Notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1mFxnk88tvQjZwlSB8vthuq_pnYSQRe-D?usp=sharing)
 
@@ -25,7 +25,7 @@ Here is a list of our group members, with their names, email addresses and GitHu
 
 Our group stumbled upon the FER-2013 dataset as we were searching for ideas for the final project on Kaggle and other dataset websites. Since we enjoyed working with Neural Networks, we wanted to choose a dataset that allowed us to utilize convolutional layers and in doing so, accurately classify some information. When we came across this dataset, we were excited to use it for our final project because it would give us an introduction to how facial recognition works on our phones and other applications. Having a model that accurately classifies images with certain emotions, features, age, race, and etc is important as it can help improve facial recognition further and has many useful and applicable applications - such as, potentially catching/indetifying criminals from an existing database. 
 
-Moreover, emojis are an integral part of modern-day communication and are a great way to express emotions in a short, visual manner. Thus, the aim of our project is to be able to predict the emoji that best fits a given facial expression. Although there is a plethora of available emojis, we wanted to to keep our project relatively achievable within the time-frame and thus decided to focus on a few that we thought were essential in expressing the most basic human expressions/emotions. These are ------. Our goal is to be able to create a model that can simply output an emoji that matches the emotion present in a particular image of a human facial expression.
+Thus, the aim of our project is to be able to predict the emotion that best fits a given facial expression. Although there is a plethora of possible emotions, our project focuses on a few that are the most basic human expressions/emotions. These are categorized as Angry, Fear, Happy, Neutral, Sad, Surprise and Disgust. 
 
 [Our Dataset](https://www.kaggle.com/datasets/msambare/fer2013)
 
