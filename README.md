@@ -10,7 +10,7 @@ Group Project for ECS 171, Fall Quarter 2022, at UC Davis under Dr. Solares.
 | Member Name  | GitHub Username |
 | ------------- | ------------- |
 | Alan Chuang  | AlanChuang1  |
-| Daksh Jain  | Content Cell  |
+| Daksh Jain  | DakshJ4033  |
 | Sohum Goel  | SohumGoel  |
 | Arnav Rastogi  | Arnav33R |
 | Grisha Bandodkar  | grishaab |
@@ -33,4 +33,11 @@ The dataset contains images of faces that are 48x48 pixel grayscale and centered
 
 There are 4,254 observations in the dataset, with 1774 happy observations, 1233 neutral observations, and 1247 sad observations. Each “observation”, or image file, is a 48x48 pixel-sized grayscale image of expressions on faces. Sizes are all standardized, so they don’t need to be cropped or require any further changes. However, some images need to be flipped horizontally, and some need to be rescaled, which can be accomplished through keras preprocessing (ImageDataGenerator). In order to normalize the images' pixels, we need to rescale the RGB coefficients to be in the range of 0 and 1. 
 
+### Write-Up
+
+## Introduction
+
+Our group stumbled upon the FER-2013 dataset as we were searching for ideas for the final project on Kaggle and other dataset websites. We wanted to choose a dataset that allowed us to utilize convolutional layers and accurately classify some information. We found this dataset to be cool because it gives us a baby-introduction to how facial recognition works on our phones and other applications. Having a model that accurately classifies images with certain emotions, features, age, race, and etc is important as it can help improve facial recognition further and potentially catch criminals from an existing database. 
+
+![image](https://user-images.githubusercontent.com/82127623/205781008-68169272-1f28-4320-8438-3ca3c037cc9c.png)
 
