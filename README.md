@@ -15,16 +15,6 @@ Group Project for ECS 171, Fall Quarter 2022, at UC Davis under Dr. Solares.
 | Arnav Rastogi  | Arnav33R |
 | Grisha Bandodkar  | grishaab |
 
-
-### Description of Dataset:
-
-The dataset contains images of faces that are 48x48 pixel grayscale and centered, thus occupying almost the same amount of space for each image, making recognition easier. The training set consists of 28,709 examples and the public test set consists of 3,589 examples.
-
-
-### Data Exploration
-
-There are 4,254 observations in the dataset, with 1774 happy observations, 1233 neutral observations, and 1247 sad observations. Each “observation”, or image file, is a 48x48 pixel-sized grayscale image of expressions on faces. Sizes are all standardized, so they don’t need to be cropped or require any further changes. However, some images need to be flipped horizontally, and some need to be rescaled, which can be accomplished through keras preprocessing (ImageDataGenerator). In order to normalize the images' pixels, we need to rescale the RGB coefficients to be in the range of 0 and 1. 
-
 # Write-Up
 
 ## Introduction
@@ -34,6 +24,9 @@ Our group stumbled upon the FER-2013 dataset as we were searching for ideas for 
 Moreover, emojis are an integral part of modern-day communication and are a great way to express emotions in a short, visual manner. Thus, the aim of our project is to be able to predict the emoji that best fits a given facial expression. Although there is a plethora of available emojis, we wanted to to keep our project relatively achievable within the time-frame and thus decided to focus on a few that we thought were essential in expressing the most basic human expressions/emotions. These are ------. Our goal is to be able to create a model that can simply output an emoji that matches the emotion present in a particular image of a human facial expression.
 
 [Our Dataset](https://www.kaggle.com/datasets/msambare/fer2013)
+
+This dataset contains images of faces that are 48x48 pixel grayscale and centered, thus occupying almost the same amount of space for each image, making recognition easier. Here are some examples of images contained in the dataset:
+
 
 ![image](https://user-images.githubusercontent.com/82127623/205781977-7bb5af90-6261-40ae-8ced-cc6c81751df2.png)
 
@@ -47,6 +40,8 @@ Figure 2: Examples of images associated with the emotion happiness
 ## Methods
 
 ### Data Exploration
+
+There are 4,254 observations in the dataset, with 1774 happy observations, 1233 neutral observations, and 1247 sad observations. Each “observation”, or image file, is a 48x48 pixel-sized grayscale image of expressions on faces. Sizes are all standardized, so they don’t need to be cropped or require any further changes. However, some images need to be flipped horizontally, and some need to be rescaled, which can be accomplished through keras preprocessing (ImageDataGenerator). In order to normalize the images' pixels, we need to rescale the RGB coefficients to be in the range of 0 and 1. 
 
 ----- empty -----
 
