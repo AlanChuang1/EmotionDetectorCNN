@@ -11,13 +11,13 @@ Below is a link to our entire project notebook in Google Colab. We also have sma
 
 Here is a list of our group members, with their names, email addresses and GitHub usernames:
 
-| Member Name  | Email | GitHub Username |
+| Name | Email | GitHub Username |
 | ------------- | ------------- | ------------- |
-| Alan Chuang  |   | AlanChuang1 |
+| Alan Chuang  | afchuang@ucdavis.edu | AlanChuang1 |
 | Daksh Jain  |   | DakshJ4033 |
-| Sohum Goel  |   | SohumGoel |
-| Arnav Rastogi  |  | Arnav33R |
-| Grisha Bandodkar  |  | grishaab |
+| Sohum Goel  | sohgoel@ucdavis.edu | SohumGoel |
+| Arnav Rastogi  | arnrastogi@ucdavis.edu | Arnav33R |
+| Grisha Bandodkar | gbandodkar@ucdavis.edu | grishaab |
 
 # Write-Up
 
