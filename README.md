@@ -14,7 +14,7 @@ Here is a list of our group members, with their names, email addresses and GitHu
 | Name | Email | GitHub Username |
 | ------------- | ------------- | ------------- |
 | Alan Chuang  | afchuang@ucdavis.edu | AlanChuang1 |
-| Daksh Jain  |   | DakshJ4033 |
+| Daksh Jain  | dajain@ucdavis.edu  | DakshJ4033 |
 | Sohum Goel  | sohgoel@ucdavis.edu | SohumGoel |
 | Arnav Rastogi  | arnrastogi@ucdavis.edu | Arnav33R |
 | Grisha Bandodkar | gbandodkar@ucdavis.edu | grishaab |
