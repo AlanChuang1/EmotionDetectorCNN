@@ -16,14 +16,6 @@ Group Project for ECS 171, Fall Quarter 2022, at UC Davis under Dr. Solares.
 | Grisha Bandodkar  | grishaab |
 
 
-## Project Abstract
-
-### Overview and Approach:
-
-Emojis are widely used for modern communication, and offer a way to express emotions visually. Through computer vision and machine learning, the aim of our project is to be able to predict the emoji that best fits a given facial expression. Since there are many emojis, to keep our project simple and achievable within the given time constraint, we are going to use just a few: Happy, Sad, and Neutral. If time permits, we will move onto more complex emotions: Angry, Disgust, Fear, and Surprise. Our approach is to use a Convolution Neural Network for facial recognition, and we are going to classify these expressions into a category of emotions. From there, we will simply output the emoji that matches that particular emotion. 
-
-Dataset: https://www.kaggle.com/datasets/msambare/fer2013 
-
 ### Description of Dataset:
 
 The dataset contains images of faces that are 48x48 pixel grayscale and centered, thus occupying almost the same amount of space for each image, making recognition easier. The training set consists of 28,709 examples and the public test set consists of 3,589 examples.
@@ -37,15 +29,19 @@ There are 4,254 observations in the dataset, with 1774 happy observations, 1233 
 
 ## Introduction
 
-Our group stumbled upon the FER-2013 dataset as we were searching for ideas for the final project on Kaggle and other dataset websites. We wanted to choose a dataset that allowed us to utilize convolutional layers and accurately classify some information. We found this dataset to be cool because it gives us a baby-introduction to how facial recognition works on our phones and other applications. Having a model that accurately classifies images with certain emotions, features, age, race, and etc is important as it can help improve facial recognition further and potentially catch criminals from an existing database. 
+Our group stumbled upon the FER-2013 dataset as we were searching for ideas for the final project on Kaggle and other dataset websites. Since we enjoyed working with Neural Networks, we wanted to choose a dataset that allowed us to utilize convolutional layers and in doing so, accurately classify some information. When we came across this dataset, we were excited to use it for our final project because it would give us an introduction to how facial recognition works on our phones and other applications. Having a model that accurately classifies images with certain emotions, features, age, race, and etc is important as it can help improve facial recognition further and has many useful and applicable applications - such as, potentially catching/indetifying criminals from an existing database. 
+
+Moreover, emojis are an integral part of modern-day communication and are a great way to express emotions in a short, visual manner. Thus, the aim of our project is to be able to predict the emoji that best fits a given facial expression. Although there is a plethora of available emojis, we wanted to to keep our project relatively achievable within the time-frame and thus decided to focus on a few that we thought were essential in expressing the most basic human expressions/emotions. These are ------. Our goal is to be able to create a model that can simply output an emoji that matches the emotion present in a particular image of a human facial expression.
+
+[Our Dataset](https://www.kaggle.com/datasets/msambare/fer2013)
 
 ![image](https://user-images.githubusercontent.com/82127623/205781977-7bb5af90-6261-40ae-8ced-cc6c81751df2.png)
 
-Figure 1: Examples of images associated with fear
+Figure 1: Examples of images associated with the emotion fear
 
 ![image](https://user-images.githubusercontent.com/82127623/205782283-ee7f3f80-7913-4174-8f93-76fe9a94574a.png)
 
-Figure 2: Examples of images associated with happy
+Figure 2: Examples of images associated with the emotion happiness
 
 
 ## Methods
