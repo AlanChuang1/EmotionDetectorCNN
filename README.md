@@ -50,6 +50,20 @@ Figure 2: Examples of images associated with happy
 
 ## Methods
 
+### Data Exploration
+
+----- empty -----
+
+### Preprocessing
+
+----- empty -----
+
+### Model 1
+
+----- empty -----
+
+### Model 2
+
 ----- empty -----
 
 ## Results
