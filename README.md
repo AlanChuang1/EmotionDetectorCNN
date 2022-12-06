@@ -2,18 +2,22 @@
 
 Group Project for ECS 171, Fall Quarter 2022, at UC Davis under Dr. Solares.
 
+Below is a link to our entire project notebook in Google Colab. We also have smaller notebooks for each major section of our project located throughout this write-up
+
 [![Open Entire Project Notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1mFxnk88tvQjZwlSB8vthuq_pnYSQRe-D?usp=sharing)
 
 
 ## Group Members:
 
-| Member Name  | GitHub Username |
-| ------------- | ------------- |
-| Alan Chuang  | AlanChuang1  |
-| Daksh Jain  | DakshJ4033  |
-| Sohum Goel  | SohumGoel  |
-| Arnav Rastogi  | Arnav33R |
-| Grisha Bandodkar  | grishaab |
+Here is a list of our group members, with their names, email addresses and GitHub usernames:
+
+| Member Name  | Email | GitHub Username |
+| ------------- | ------------- | ------------- |
+| Alan Chuang  |   | AlanChuang1 |
+| Daksh Jain  |   | DakshJ4033 |
+| Sohum Goel  |   | SohumGoel |
+| Arnav Rastogi  |  | Arnav33R |
+| Grisha Bandodkar  |  | grishaab |
 
 # Write-Up
 
