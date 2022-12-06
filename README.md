@@ -40,9 +40,11 @@ There are 4,254 observations in the dataset, with 1774 happy observations, 1233 
 Our group stumbled upon the FER-2013 dataset as we were searching for ideas for the final project on Kaggle and other dataset websites. We wanted to choose a dataset that allowed us to utilize convolutional layers and accurately classify some information. We found this dataset to be cool because it gives us a baby-introduction to how facial recognition works on our phones and other applications. Having a model that accurately classifies images with certain emotions, features, age, race, and etc is important as it can help improve facial recognition further and potentially catch criminals from an existing database. 
 
 ![image](https://user-images.githubusercontent.com/82127623/205781977-7bb5af90-6261-40ae-8ced-cc6c81751df2.png)
+
 Figure 1: Examples of images associated with fear
 
 ![image](https://user-images.githubusercontent.com/82127623/205782283-ee7f3f80-7913-4174-8f93-76fe9a94574a.png)
+
 Figure 2: Examples of images associated with happy
 
 
@@ -64,4 +66,12 @@ Figure 2: Examples of images associated with happy
 
 ## Collaboration 
 
+Alan Chuang: 
+
 Daksh Jain: I was responsible partially for coding, debugging, and communicating with team members to setup meetings and manage deadlines. I also worked on the write up introduction and ____ section. We split tasks evenly and helped eachother when needed. I believe everyone in the group worked hard and together as a team!
+
+Sohum Goel: 
+
+Grisha Bandodkar: 
+
+Arnav Rastogi: 
