@@ -79,7 +79,7 @@ Alan Chuang:
 
 Daksh Jain: I was responsible partially for coding, debugging, and communicating with team members to setup meetings and manage deadlines. I also worked on the write up introduction and ____ section. We split tasks evenly and helped eachother when needed. I believe everyone in the group worked hard and together as a team!
 
-Sohum Goel:  I was responsible for the initial set up of the neural network, along with some trial runs. I also communited with the team to setup meetings and all of us split tasks evenly added on to each other's work. Everyone worked togther to complete this project.
+Sohum Goel: I was responsible for the initial setup of the neural network, along with some trial runs. I also communicated with the team to set up meetings, and all of us split tasks evenly and added to each other's work. Everyone worked together to complete this project.
 
 Grisha Bandodkar: 
 
