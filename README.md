@@ -51,7 +51,7 @@ There are 4,254 observations in the dataset, with 1774 happy observations, 1233 
 
 ### Preprocessing
 
------ empty -----
+The disgust directory is deleted as it represents a tiny portion of the entire dataset. Hence can help reduce the training time for the model to a certain extent.
 
 ### Model 1
 
