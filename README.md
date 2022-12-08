@@ -308,3 +308,5 @@ Arnav Rastogi: I worked largely on the write-up, but also partially on debugging
 [4]A. Jayasankha, “Build your own model with Convolutional Neural Networks,” Analytics Vidhya, Aug. 28, 2020. https://medium.com/analytics-vidhya/build-your-own-model-with-convolutional-neural-networks-5ca0dd222c8f (accessed Dec. 08, 2022).
 
 [5]R. Prabhu, “Understanding of Convolutional Neural Network (CNN) — Deep Learning,” Medium, Mar. 04, 2018. https://medium.com/@RaghavPrabhu/understanding-of-convolutional-neural-network-cnn-deep-learning-99760835f148
+
+[6]Y. Fan et al., “FER-PCVT: Facial Expression Recognition with Patch-Convolutional Vision Transformer for Stroke Patients,” Brain Sciences, vol. 12, no. 12, p. 1626, Dec. 2022, doi: 10.3390/brainsci12121626.
