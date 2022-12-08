@@ -22,7 +22,19 @@ Our group stumbled upon the FER-2013 dataset as we were searching for ideas for 
 
 Thus, the aim of our project is to be able to predict the emotion that best fits a given facial expression. Although there is a plethora of possible emotions, our project focuses on a few that are the most basic human expressions/emotions. These are categorized as Angry, Fear, Happy, Neutral, Sad, Surprised, and Disgust.
 
-Dataset: https://www.kaggle.com/datasets/msambare/fer2013 
+[Our Dataset](https://www.kaggle.com/datasets/msambare/fer2013)
+
+This dataset contains images of faces that are 48x48 pixel grayscale and centered, thus occupying almost the same amount of space for each image, making recognition easier. Here are some examples of images contained in the dataset:
+
+
+![image](https://user-images.githubusercontent.com/82127623/205781977-7bb5af90-6261-40ae-8ced-cc6c81751df2.png)
+
+Figure 1: Examples of images associated with the emotion fear
+
+![image](https://user-images.githubusercontent.com/82127623/205782283-ee7f3f80-7913-4174-8f93-76fe9a94574a.png)
+
+Figure 2: Examples of images associated with the emotion happiness
+
 
 ## Methods
 
