@@ -105,5 +105,26 @@ df_train = df.head(samplesize)
 
 ```
 
+We now use ImageDataGenerator() and flow_from_dataframe() via Keras preprocessing to go and apply various things such as rescale, color mode, size, class mode, shuffle, and subset filters to our training and validation subsets from the original dataframe. We will use these generators later in training and evaluating our model for accuracy. Similar process followed for the test data.
+
+```python
+
+train_generator = datagen.flow_from_dataframe(
+    directory = train_dir, 
+    dataframe=df_train,
+    x_col="Images",
+    y_col="Labels",
+    subset="training",
+    batch_size=32,
+    seed=42,
+    shuffle=True,
+    target_size=(48,48), 
+    class_mode="categorical", 
+    color_mode="grayscale"
+)
+
+```
+
+## Results
 
 
