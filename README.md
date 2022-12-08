@@ -196,6 +196,13 @@ def plotValidationLossAccuracy(model):
     plt.show()
 ```
 
+The ‘history’ object with .fit() stores all the training metrics for every epoch. Accuracy and Loss metrics are accessed after training by accessing the history object. Training and validation and comparing against each other for both of these metrics.
+
+### Retrieving Accuracy for a Model 
+
+- Talk about getAccuracy(model)  
+
+
 ## Results
 
 ### Data Evaluation
@@ -279,3 +286,16 @@ Sohum Goel: I was responsible for the initial setup of the neural network, along
 Grisha Bandodkar: I mainly worked on training and running multiple iterations of the model such that it could get the best possible accuracy results. I contributed towards the results, discussion, and conclusion sections of the write up. Everyone contributed equally toward this project. 
 
 Arnav Rastogi: I worked largely on the write-up, but also partially on debugging and organizing the repository, along with coordinating with team members to manage milestone deadlines and fix meeting times. We all contributed equally, coordinated well, and worked together on this project
+
+
+## Appendix/Sources
+
+[1]R. Pramoditha, “Coding a Convolutional Neural Network (CNN) Using Keras Sequential API,” Medium, Jun. 28, 2022. https://towardsdatascience.com/coding-a-convolutional-neural-network-cnn-using-keras-sequential-api-ec5211126875
+
+[2]Darshil, “How to create effective CNN for your use-case,” Analytics Vidhya, Jul. 18, 2021. https://medium.com/analytics-vidhya/how-to-create-effective-cnn-for-your-use-case-6bae5c6871f6 (accessed Dec. 08, 2022).
+
+[3]R. Gandhi, “Build Your Own Convolution Neural Network in 5 mins,” Medium, May 18, 2018. https://towardsdatascience.com/build-your-own-convolution-neural-network-in-5-mins-4217c2cf964f (accessed Dec. 08, 2022).
+
+[4]A. Jayasankha, “Build your own model with Convolutional Neural Networks,” Analytics Vidhya, Aug. 28, 2020. https://medium.com/analytics-vidhya/build-your-own-model-with-convolutional-neural-networks-5ca0dd222c8f (accessed Dec. 08, 2022).
+
+[5]R. Prabhu, “Understanding of Convolutional Neural Network (CNN) — Deep Learning,” Medium, Mar. 04, 2018. https://medium.com/@RaghavPrabhu/understanding-of-convolutional-neural-network-cnn-deep-learning-99760835f148
