@@ -289,7 +289,7 @@ Alan Chuang: I worked on composing parts of the writeup as well as the finial fo
 
 Daksh Jain: I was responsible partially for coding, debugging, and communicating with team members to set up meetings and manage deadlines. I also worked on the write up introduction and Methods section. We split tasks evenly and helped each other when needed. I believe everyone in the group worked hard and together as a team!
 
-Sohum Goel: I was responsible for the initial setup of the neural network, along with some trial runs. We added to each other's work. Everyone worked together to complete this project.
+Sohum Goel: I was responsible for the initial setup of the neural network, along with some trial runs. I also contributed towards the write up. We added to each other's work. Everyone worked together to complete this project.
 
 Grisha Bandodkar: I mainly worked on training and running multiple iterations of the model such that it could get the best possible accuracy results. I contributed towards the results, discussion, and conclusion sections of the write up. Everyone contributed equally toward this project. 
 
