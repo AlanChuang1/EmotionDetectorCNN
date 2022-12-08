@@ -152,7 +152,7 @@ A bar chart that shows the total number of samples in each class along with an e
 
 Disgust class is removed from the dataset and will not be used in training the model. A single dataframe is created that holds all the images with their corresponding labels as shown in the below figure. Then all the images within are randomly shuffled and a sample is taken from it.
 
-![image](https://github.com/grishaab/MLProjectG4/blob/final/images/results2.png)
+![image](https://github.com/grishaab/MLProjectG4/blob/final/images/results3.png)
 
 All models ran for 40 epochs using the same training and validation generator from preprocessed data. 
 
