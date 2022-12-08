@@ -139,4 +139,30 @@ train_generator = datagen.flow_from_dataframe(
 
 ## Results
 
+All models ran for 40 epochs using the same training and validation generator from preprocessed data. 
+
+### Model 1
+Model 1 generated a testing accuracy of 37.423%.
+
+![image]
+
+### Model 2
+Model 2 generated a testing accuracy of 40.025%.
+
+![image]
+
+### Model 3
+Model 3 generated a testing accuracy of 44.362%.
+
+![image]
+
+### Model 4
+Model 4 generated a testing accuracy of 44.362%. 
+
+![image]
+
+### Model 5
+Model 5 generated a testing accuracy of 42.379%. 
+
+![image]
 
