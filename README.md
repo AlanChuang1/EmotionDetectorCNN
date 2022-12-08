@@ -44,7 +44,7 @@ There are 4,254 observations in the dataset, with 1774 happy observations, 1233 
 
 ### Data Evaluation
 
-Here we are creating a dataframe by going through the directory and setting each image with its corresponding expression and storing that in a pandas dataset which is going to be returned by the function. We use the returned dataset to display the number of samples for each expression in our train and test dataset.  
+We create the dataframe by going through the directory and setting each image with its corresponding expression and storing that in a pandas dataset which is going to be returned by the function. We use the returned dataset to display the number of samples for each expression in our train and test dataset.  
 
 
 ```python
@@ -71,7 +71,7 @@ print(train_count)
 print(test_count)
 ```
 
-Here we go through our directory again and plot an example image with the corresponding expression using our test data for the y-axis for simplicity. 
+We go through our directory again and plot an example image with the corresponding expression using our test data for the y-axis for simplicity. 
 
 ```python
 
@@ -91,8 +91,8 @@ plt.show()
 ```
 
 ### Preprocessing
-We now move on to preprocessing our data by eliminating a class and reformatting the structure of all images.
-We remove disgust from the dataset. Then we create a single data frame consisting of all the images with their corresponding class (label).
+Moving on, we preprocess our data by eliminating a class and reformatting the structure of all images.
+Next we remove disgust from the dataset. Then we create a single data frame consisting of all the images with their corresponding class (label).
 
 
 ```python
@@ -117,7 +117,7 @@ df_train = df.head(samplesize)
 
 ```
 
-We now use ImageDataGenerator() and flow_from_dataframe() via Keras preprocessing to go and apply various things such as rescale, color mode, size, class mode, shuffle, and subset filters to our training and validation subsets from the original dataframe. We will use these generators later in training and evaluating our model for accuracy. Similar process followed for the test data.
+Then, we used ImageDataGenerator() and flow_from_dataframe() via Keras preprocessing to go and apply various things such as rescale, color mode, size, class mode, shuffle, and subset filters to our training and validation subsets from the original dataframe. We will use these generators later in training and evaluating our model for accuracy. A similar process followed for the test data.
 
 ```python
 
