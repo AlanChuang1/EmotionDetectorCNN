@@ -18,33 +18,37 @@ Group Project for ECS 171, Fall Quarter 2022, at UC Davis under Dr. Solares.
 
 ## Introduction
 
-Our group stumbled upon the FER-2013 dataset as we were searching for ideas for the final project on Kaggle and other dataset websites. Since we enjoyed working with Neural Networks, we wanted to choose a dataset that allowed us to utilize convolutional layers to accurately classify information. We were excited to use it for our final project because it would give us an introduction to facial recognition on our phones and other applications. Having a model that accurately classifies images with certain emotions, features, age, race, etc is important as it can help improve facial recognition further and has many useful and applicable applications - such as, potentially catching/identifying criminals from an existing database.
+- Our group stumbled upon the FER-2013 dataset as we were searching for ideas for the final project on Kaggle and other dataset websites. Since we enjoyed working with Neural Networks, we wanted to choose a dataset that allowed us to utilize convolutional layers to accurately classify information. We were excited to use it for our final project because it would give us an introduction to facial recognition on our phones and other applications. 
 
-Thus, the aim of our project is to be able to predict the emotion that best fits a given facial expression. Although there is a plethora of possible emotions, our project focuses on a few that are the most basic human expressions/emotions. These are categorized as Angry, Fear, Happy, Neutral, Sad, Surprised, and Disgust.
+- Having a model that accurately classifies images with certain emotions, features, age, race, etc is important as it can help improve facial recognition further and has many useful and applicable applications - such as, potentially catching/identifying criminals from an existing database.
+
+- Thus, the aim of our project is to be able to predict the emotion that best fits a given facial expression. Although there is a plethora of possible emotions, our project focuses on a few that are the most basic human expressions/emotions. These are categorized as Angry, Fear, Happy, Neutral, Sad, Surprised, and Disgust.
 
 [Our Dataset](https://www.kaggle.com/datasets/msambare/fer2013)
 
-This dataset contains images of faces that are 48x48 pixel grayscale and centered, thus occupying almost the same amount of space for each image, making recognition easier. Here are some examples of images contained in the dataset:
+- This dataset contains images of faces that are 48x48 pixel grayscale and centered, thus occupying almost the same amount of space for each image, making recognition easier. Here are some examples of images contained in the dataset:
 
 
 ![image](https://user-images.githubusercontent.com/82127623/205781977-7bb5af90-6261-40ae-8ced-cc6c81751df2.png)
 
-Figure 1: Examples of images associated with the emotion fear
+- Figure 1: Examples of images associated with the emotion fear
 
 ![image](https://user-images.githubusercontent.com/82127623/205782283-ee7f3f80-7913-4174-8f93-76fe9a94574a.png)
 
-Figure 2: Examples of images associated with the emotion happiness
+- Figure 2: Examples of images associated with the emotion happiness
 
 
 ## Methods
 
 ### Data Exploration
 
-There are 4,254 observations in the dataset, with 1774 happy observations, 1233 neutral observations, and 1247 sad observations. Each “observation”, or image file, is a 48x48 pixel-sized grayscale image of expressions on faces. Sizes are all standardized, so they don’t need to be cropped or require further changes. However, some images need to be flipped horizontally, and some need to be rescaled, which can be accomplished through Keras preprocessing (ImageDataGenerator). In order to normalize the images' pixels, we need to rescale the RGB coefficients to be in the range of 0 and 1.
+- There are 4,254 observations in the dataset, with 1774 happy observations, 1233 neutral observations, and 1247 sad observations. Each “observation”, or image file, is a 48x48 pixel-sized grayscale image of expressions on faces. Sizes are all standardized, so they don’t need to be cropped or require further changes. 
+
+- However, some images need to be flipped horizontally, and some need to be rescaled, which can be accomplished through Keras preprocessing (ImageDataGenerator). In order to normalize the images' pixels, we need to rescale the RGB coefficients to be in the range of 0 and 1.
 
 ### Data Evaluation
 
-We create the dataframe by going through the directory and setting each image with its corresponding expression and storing that in a pandas dataset which is going to be returned by the function. We use the returned dataset to display the number of samples for each expression in our train and test dataset.  
+- We create the dataframe by going through the directory and setting each image with its corresponding expression and storing that in a pandas dataset which is going to be returned by the function. We use the returned dataset to display the number of samples for each expression in our train and test dataset.  
 
 
 ```python
@@ -71,7 +75,7 @@ print(train_count)
 print(test_count)
 ```
 
-We go through our directory again and plot an example image with the corresponding expression using our test data for the y-axis for simplicity. 
+- We then go through our directory again and plot an example image with the corresponding expression using our test data for the y-axis for simplicity. 
 
 ```python
 
@@ -91,7 +95,7 @@ plt.show()
 ```
 
 ### Preprocessing
-Moving on, we preprocess our data by eliminating a class and reformatting the structure of all images.
+- Moving on, we preprocess our data by eliminating a class and reformatting the structure of all images.
 Next we remove disgust from the dataset. Then we create a single data frame consisting of all the images with their corresponding class (label).
 
 
@@ -117,7 +121,7 @@ df_train = df.head(samplesize)
 
 ```
 
-Then, we used ImageDataGenerator() and flow_from_dataframe() via Keras preprocessing to go and apply various things such as rescale, color mode, size, class mode, shuffle, and subset filters to our training and validation subsets from the original dataframe. We will use these generators later in training and evaluating our model for accuracy. A similar process followed for the test data.
+- Then, we used ImageDataGenerator() and flow_from_dataframe() via Keras preprocessing to go and apply various things such as rescale, color mode, size, class mode, shuffle, and subset filters to our training and validation subsets from the original dataframe. We will use these generators later in training and evaluating our model for accuracy. A similar process followed for the test data.
 
 ```python
 
@@ -194,7 +198,7 @@ def plotValidationLossAccuracy(model):
     plt.show()
 ```
 
-The ‘history’ object with .fit() stores all the training metrics for every epoch. Accuracy and Loss metrics are accessed after training by accessing the history object. Training and validation and comparing against each other for both of these metrics.
+- The ‘history’ object with .fit() stores all the training metrics for every epoch. Accuracy and Loss metrics are accessed after training by accessing the history object. Training and validation and comparing against each other for both of these metrics.
 
 ### Retrieving Accuracy for a Model 
 
@@ -212,43 +216,42 @@ def getAccuracy(model):
 
 ### Data Evaluation
 
-This shows the number of samples for each expression in our train and test dataset.  
+- This shows the number of samples for each expression in our train and test dataset.  
 
 ![image](https://github.com/grishaab/MLProjectG4/blob/final/images/results1.png)
 
-A bar chart that shows the total number of samples in each class along with an example image for each.
+- A bar chart that shows the total number of samples in each class along with an example image for each.
  
 ![image](https://github.com/grishaab/MLProjectG4/blob/final/images/results2.png)
 
-Disgust class is removed from the dataset and will not be used in training the model. A single dataframe is created that holds all the images with their corresponding labels as shown in the below figure. Then all the images within are randomly shuffled and a sample is taken from it.
+- Disgust class is removed from the dataset and will not be used in training the model. A single dataframe is created that holds all the images with their corresponding labels as shown in the below figure. Then all the images within are randomly shuffled and a sample is taken from it.
 
 ![image](https://github.com/grishaab/MLProjectG4/blob/final/images/results3.png)
 
-
-All models ran for 40 epochs using the same training and validation generator from preprocessed data. 
+- All models ran for 40 epochs using the same training and validation generator from preprocessed data. 
 
 ### Model 1
-Model 1 generated a testing accuracy of 37.423%.
+- Model 1 generated a testing accuracy of 37.423%.
 
 ![image](https://github.com/grishaab/MLProjectG4/blob/final/images/model1.png)
 
 ### Model 2
-Model 2 generated a testing accuracy of 40.025%.
+- Model 2 generated a testing accuracy of 40.025%.
 
 ![image](https://github.com/grishaab/MLProjectG4/blob/final/images/model2.png)
 
 ### Model 3
-Model 3 generated a testing accuracy of 44.362%.
+- Model 3 generated a testing accuracy of 44.362%.
 
 ![image](https://github.com/grishaab/MLProjectG4/blob/final/images/model3.png)
 
 ### Model 4
-Model 4 generated a testing accuracy of 44.362%. 
+- Model 4 generated a testing accuracy of 44.362%. 
 
 ![image](https://github.com/grishaab/MLProjectG4/blob/final/images/model4.png)
 
 ### Model 5
-Model 5 generated a testing accuracy of 42.379%. 
+- Model 5 generated a testing accuracy of 42.379%. 
 
 ![image](https://github.com/grishaab/MLProjectG4/blob/final/images/model5.png)
 
@@ -288,41 +291,43 @@ firstModel = model.fit_generator(generator=train_generator,
 
 ### Data Exploration
 
-We selected this dataset because it contained ample photos of 7 different types of emotions, and it already separated the data into sorted directories. The sizes are all standardized and required little preprocessing. 
-Data Exploration
-Using colored images would not be beneficial as grayscale is enough for classification, while color would add an extra dimension (r,g,b) and result in a complex and resource-intensive model. 
+- We selected this dataset because it contained ample photos of 7 different types of emotions, and it already separated the data into sorted directories. The sizes are all standardized and required little preprocessing. 
 
-We also removed disgust from the dataset as it's small compared to the rest of the expressions, thus saving some time while training the model. We created a single data frame that stored all the images with their corresponding class (label). This made it easy for us to take a sample of the dataset because running the model on the entire dataset was extremely time-consuming. 
+- Using colored images would not be beneficial as grayscale is enough for classification, while color would add an extra dimension (r,g,b) and result in a complex and resource-intensive model. 
 
-Flow_from_dataframe is specifically used because flow_from_directory is designed for datasets that have sub-directories (FER-2013) for each class, and we use a single data frame containing all the images.
+- We also removed disgust from the dataset as it's small compared to the rest of the expressions, thus saving some time while training the model. We created a single data frame that stored all the images with their corresponding class (label). This made it easy for us to take a sample of the dataset because running the model on the entire dataset was extremely time-consuming. 
+
+- Flow_from_dataframe is specifically used because flow_from_directory is designed for datasets that have sub-directories (FER-2013) for each class, and we use a single data frame containing all the images.
 
 
 ### Preprocessing 
 
-Since all images were already the same size of 48x48 pixels, we did not further crop them. We decided to flip some images horizontally and rescale them. Normalization of the image pixels was important for classification, so the RGB coefficients were normalized to be within the range of 0 and 1. We chose grayscale images in order to ease classification. Ultimately, we could have added a shift for the width and height of the images in order to properly capture the face’s emotion for classification, or even add a zoom range. While running several iterations of models, we discovered that not only did it consume more time per epoch during training, but it also lowered validation accuracy significantly. Hence, we opted for a more simple preprocessed data set. 
+- Since all images were already the same size of 48x48 pixels, we did not further crop them. We decided to flip some images horizontally and rescale them. Normalization of the image pixels was important for classification, so the RGB coefficients were normalized to be within the range of 0 and 1. We chose grayscale images in order to ease classification. 
+
+- Ultimately, we could have added a shift for the width and height of the images in order to properly capture the face’s emotion for classification, or even add a zoom range. While running several iterations of models, we discovered that not only did it consume more time per epoch during training, but it also lowered validation accuracy significantly. Hence, we opted for a more simple preprocessed data set. 
 
 
 ## Conclusion
 
-Extended application: 
-Training the model on more intricate expressions could make the model more sensitive to subtle facial expressions. This project could be applied in real time to analyze expressions in crowded areas, such as bars, to prevent crimes. 
+### Extended application: 
+- Training the model on more intricate expressions could make the model more sensitive to subtle facial expressions. This project could be applied in real time to analyze expressions in crowded areas, such as bars, to prevent crimes. 
 
-There are also social applications for such a project, such as AI interactions with humans. If we could accurately predict human expressions and emotions using computer vision, we could create virtual therapists that can correctly analyze facial expressions. There could also be further implementations of this in neurotech and ML. In fact, this already exists today, in the form of algorithms that analyze the level of motivation for stroke patients undergoing therapy.
+- There are also social applications for such a project, such as AI interactions with humans. If we could accurately predict human expressions and emotions using computer vision, we could create virtual therapists that can correctly analyze facial expressions. There could also be further implementations of this in neurotech and machine learning. In fact, this already exists today, in the form of algorithms that analyze the level of motivation for stroke patients undergoing therapy.
 
-Model 4 performed the best with the highest testing accuracy of 44.362%. If we had more computing power, we would have run the model on the entire dataset which might further improved the testing accuracy. Since the dataset was huge, it was not feasible for us to do that.
+- Model 4 performed the best with the highest testing accuracy of 44.362%. If we had more computing power, we would have run the model on the entire dataset which might further improved the testing accuracy. Since the dataset was huge, it was not feasible for us to do that.
 
 
 ## Collaboration
 
-Alan Chuang: I worked on composing parts of the writeup as well as the finial formatting, and also did some initial debugging. We all worked towards setting up meetings and meeting deadlines, and contributed equally to complete this project, which was a great learning opportunity!
+- Alan Chuang: I worked on composing parts of the writeup as well as the finial formatting, and also did some initial debugging. We all worked towards setting up meetings and meeting deadlines, and contributed equally to complete this project, which was a great learning opportunity!
 
-Daksh Jain: I was responsible partially for coding, debugging, and communicating with team members to set up meetings and manage deadlines. I also worked on the write up introduction and Methods section. We split tasks evenly and helped each other when needed. I believe everyone in the group worked hard and together as a team!
+- Daksh Jain: I was responsible partially for coding, debugging, and communicating with team members to set up meetings and manage deadlines. I also worked on the write up introduction and Methods section. We split tasks evenly and helped each other when needed. I believe everyone in the group worked hard and together as a team!
 
-Sohum Goel: I was responsible for the initial setup of the neural network, along with some trial runs. I also contributed towards the write up. We added to each other's work. Everyone worked together to complete this project.
+- Sohum Goel: I was responsible for the initial setup of the neural network, along with some trial runs. I also contributed towards the write up. We added to each other's work. Everyone worked together to complete this project.
 
-Grisha Bandodkar: I mainly worked on training and running multiple iterations of the model such that it could get the best possible accuracy results. I contributed towards the results, discussion, and conclusion sections of the write up. Everyone contributed equally toward this project. 
+- Grisha Bandodkar: I mainly worked on training and running multiple iterations of the model such that it could get the best possible accuracy results. I contributed towards the results, discussion, and conclusion sections of the write up. Everyone contributed equally toward this project. 
 
-Arnav Rastogi: I worked largely on the write-up, but also partially on debugging and organizing the repository, along with coordinating with team members to manage milestone deadlines and fix meeting times. We all contributed equally, coordinated well, and worked together on this project
+- Arnav Rastogi: I worked largely on the write-up, but also partially on debugging and organizing the repository, along with coordinating with team members to manage milestone deadlines and fix meeting times. We all contributed equally, coordinated well, and worked together on this project
 
 
 ## Appendix/Sources
