@@ -58,3 +58,52 @@ test_count = count_exp(test_dir, 'test')
 print(train_count)
 print(test_count)
 ```
+
+Here we go through our directory again and plot an example image with the corresponding expression using our test data for the y-axis for simplicity. 
+
+```python
+
+test_count.transpose().plot(kind='bar',figsize=(12, 10))
+
+plt.figure(figsize=(14,22))
+i = 1
+for expression in os.listdir(train_dir):
+    img = load_img((train_dir + expression +'/'+ os.listdir(train_dir + expression)[1]))
+    plt.subplot(1,7,i)
+    plt.imshow(img)
+    plt.title(expression)
+    plt.axis('off')
+    i += 1
+plt.show()
+
+```
+
+### Preprocessing
+We now move on to preprocessing our data by eliminating a class and reformatting the structure of all images.
+We remove disgust from the dataset. Then we create a single data frame consisting of all the images with their corresponding class (label).
+
+
+```python
+
+shutil.rmtree( './train/disgust')
+shutil.rmtree( './test/disgust')
+
+# train dataset
+images = []
+labels = []
+for subset in os.listdir(train_dir):
+  image_list = os.listdir(os.path.join(train_dir,subset))  # all the names of images in the directory
+  image_list = list(map(lambda x:os.path.join(subset,x),image_list))
+  images.extend(image_list)
+  labels.extend([subset]*len(image_list)) 
+
+df = pd.DataFrame({"Images":images,"Labels":labels})      
+df = df.sample(frac=1).reset_index(drop=True) # this will shuffle the data
+samplesize = int(int(df.size)/14)  # sample size used for modelling 
+print(samplesize)
+df_train = df.head(samplesize)  
+
+```
+
+
+
