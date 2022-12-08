@@ -139,7 +139,7 @@ train_generator = datagen.flow_from_dataframe(
 
 ### Model 1
 
-- In the first model we add two convolutional layers and 3 dense layers. Then its trained over 40 epochs
+- In the first model we add two convolutional layers and 3 dense layers. Then its trained over 40 epochs. After that its complied using the Adam optimiser and categorical_crossentropy to compute loss.
 
 - Model 1 was constructed with a simple CNN structure using a Keras Sequential model from TensorFlow, which groups layers of the model linearly and provides loss and accuracy values for our training and validation datasets. 
 
