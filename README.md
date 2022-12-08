@@ -51,7 +51,11 @@ There are 4,254 observations in the dataset, with 1774 happy observations, 1233 
 
 ### Preprocessing
 
-The "disgust" directory is deleted as it represents only a tiny portion of the entire dataset. This somewhat reduces the training time for the model.
+We now move on to preprocessing our data by eliminating a class and reformatting the structure of all images.
+
+We remove disgust from the dataset.
+Next, we create a single data frame consisting of all the images with their corresponding class (label).
+
 
 ### Model 1
 
