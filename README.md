@@ -10,7 +10,7 @@ Group Project for ECS 171, Fall Quarter 2022, at UC Davis under Dr. Solares.
 | Member Name  | GitHub Username |
 | ------------- | ------------- |
 | Alan Chuang  | AlanChuang1  |
-| Daksh Jain  | Content Cell  |
+| Daksh Jain  | DakshJ4033 |
 | Sohum Goel  | SohumGoel  |
 | Arnav Rastogi  | Arnav33R |
 | Grisha Bandodkar  | grishaab |
