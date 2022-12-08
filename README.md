@@ -291,7 +291,7 @@ firstModel = model.fit_generator(generator=train_generator,
 
 ### Data Exploration
 
-- We selected this dataset because it contained ample photos of 7 different types of emotions, and it already separated the data into sorted directories. The sizes are all standardized and required little preprocessing. 
+- We selected this dataset because it contained ample photos of 7 different types of emotions, and it already separated the data into sorted directories. The sizes are all standardized and require little preprocessing. 
 
 - Using colored images would not be beneficial as grayscale is enough for classification, while color would add an extra dimension (r,g,b) and result in a complex and resource-intensive model. 
 
@@ -307,14 +307,23 @@ firstModel = model.fit_generator(generator=train_generator,
 - Ultimately, we could have added a shift for the width and height of the images in order to properly capture the face’s emotion for classification, or even add a zoom range. While running several iterations of models, we discovered that not only did it consume more time per epoch during training, but it also lowered validation accuracy significantly. Hence, we opted for a more simple preprocessed data set. 
 
 
+### Model Optimizers
+
+- We used the Adam optimizer for Model 1 since it works well with a large dataset such as ours.
+
+- We start with a relu function because its the well suited for CNNs.
+
+- After adding the Convolutional layers, we need to flatten them and then add the dense layers. Otherwise, it would result in a dimension mismatch
+
+
 ## Conclusion
+
+- Model 3 performed the best with the highest testing accuracy of 44.362% and the model with the least relative overfitting. If we had more computing power, we would have run the model on the entire dataset which might further improve the testing accuracy. Since the dataset was huge, it was not feasible for us to do that.
 
 ### Extended application: 
 - Training the model on more intricate expressions could make the model more sensitive to subtle facial expressions. This project could be applied in real time to analyze expressions in crowded areas, such as bars, to prevent crimes. 
 
 - There are also social applications for such a project, such as AI interactions with humans. If we could accurately predict human expressions and emotions using computer vision, we could create virtual therapists that can correctly analyze facial expressions. There could also be further implementations of this in neurotech and machine learning. In fact, this already exists today, in the form of algorithms that analyze the level of motivation for stroke patients undergoing therapy.
-
-- Model 4 performed the best with the highest testing accuracy of 44.362%. If we had more computing power, we would have run the model on the entire dataset which might further improved the testing accuracy. Since the dataset was huge, it was not feasible for us to do that.
 
 
 ## Collaboration
