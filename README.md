@@ -144,25 +144,44 @@ All models ran for 40 epochs using the same training and validation generator fr
 ### Model 1
 Model 1 generated a testing accuracy of 37.423%.
 
-![image]
+![image](https://github.com/grishaab/MLProjectG4/blob/final/images/model1.png)
 
 ### Model 2
 Model 2 generated a testing accuracy of 40.025%.
 
-![image]
+![image](https://github.com/grishaab/MLProjectG4/blob/final/images/model2.png)
 
 ### Model 3
 Model 3 generated a testing accuracy of 44.362%.
 
-![image]
+![image](https://github.com/grishaab/MLProjectG4/blob/final/images/model3.png)
 
 ### Model 4
 Model 4 generated a testing accuracy of 44.362%. 
 
-![image]
+![image](https://github.com/grishaab/MLProjectG4/blob/final/images/model4.png)
 
 ### Model 5
 Model 5 generated a testing accuracy of 42.379%. 
 
-![image]
+![image](https://github.com/grishaab/MLProjectG4/blob/final/images/model5.png)
+
+
+## Discussion
+
+### Data Exploration
+
+We selected this dataset because it contained ample photos of 7 different types of emotions, and it already separated the data into sorted directories. The sizes are all standardized and required little preprocessing. 
+Data Exploration
+Using colored images would not be beneficial as grayscale is enough for classification, while color would add an extra dimension (r,g,b) and result in a complex and resource-intensive model. 
+
+We also removed disgust from the dataset as it's small compared to the rest of the expressions, thus saving some time while training the model. We created a single data frame that stored all the images with their corresponding class (label). This made it easy for us to take a sample of the dataset because running the model on the entire dataset was extremely time-consuming. 
+
+Flow_from_dataframe is specifically used because flow_from_directory is designed for datasets that have sub-directories (FER-2013) for each class, and we use a single data frame containing all the images.
+
+
+###Preprocessing 
+
+Since all images were already the same size of 48x48 pixels, we did not further crop them. We decided to flip some images horizontally and rescale them. Normalization of the image pixels was important for classification, so the RGB coefficients were normalized to be within the range of 0 and 1. We chose grayscale images in order to ease classification. Ultimately, we could have added a shift for the width and height of the images in order to properly capture the face’s emotion for classification, or even add a zoom range. While running several iterations of models, we discovered that not only did it consume more time per epoch during training, but it also lowered validation accuracy significantly. Hence, we opted for a more simple preprocessed data set. 
+
 
