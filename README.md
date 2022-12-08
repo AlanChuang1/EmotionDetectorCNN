@@ -345,22 +345,24 @@ firstModel = model.fit_generator(generator=train_generator,
 
 ### Model 4
 
-- Added more layers 
+- Model 4 incorporated more layers in order to make the CNN more complex, while also increasing the number of times we use batch normalization and dropout. 
 
-- Overall didn’t improve with testing accuracy nor did it help solve the overfitting problem 
+- Overall, it didn’t necessarily improve the testing accuracy (in fact, it was exactly the same). It didn’t really help solve the overfitting problem, and the loss graph indicated a lot of uncertainty within the validation generator. 
 
 ### Model 5
 
-- Added regularizers to optimize the loss function in order to improve the testing accuracy
+- Regularizers help optimize the loss function in order to improve the testing accuracy, so we incorporated it in our layers. 
 
-- Helped solve the overfitting problem significantly! 
+- We also introduced a learning rate of 0.0001 in order to speed the training and improve optimization further. While it helped solve the overfitting problem, it did not necessarily improve the testing accuracy. 
 
-- Didn’t necessarily improve testing accuracy, but that could be due to limitations in the training set since in theory it should do better.
+- In theory, this should have been our best model but this could be due to limitations in our training set or model.
 
 
 ## Conclusion
 
-- Model 3 performed the best with the highest testing accuracy of 44.362% and the model with the least relative overfitting. If we had more computing power, we would have run the model on the entire dataset which might further improve the testing accuracy. Since the dataset was huge, it was not feasible for us to do that.
+- Model 3 performed the best with the highest testing accuracy of 44.362% and the least relative overfitting. If we had more computing power, we would have run the model on the entire dataset which might further improve the testing accuracy. 
+
+- Since the dataset was huge, it was not feasible for us to do that. We also could have used more complex preprocessing, but that caused a lot of issues since it significantly increased training time per epoch in every model.
 
 ### Extended application: 
 - Training the model on more intricate expressions could make the model more sensitive to subtle facial expressions. This project could be applied in real time to analyze expressions in crowded areas, such as bars, to prevent crimes. 
