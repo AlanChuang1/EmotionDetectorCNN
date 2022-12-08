@@ -276,11 +276,12 @@ Since all images were already the same size of 48x48 pixels, we did not further 
 
 ## Conclusion
 
-Extended application: train the model on additional expressions that are more intricate.
-Real time prediction of facial expressions can be done
+Extended application: 
+Training the model on more intricate expressions could make the model more sensitive to subtle facial expressions. This project could be applied in real time to analyze expressions in crowded areas, such as bars, to prevent crimes. 
 
-Talk about which model did the best 
-Talk about dataset being hard and not the best accuracy for us + there’s always room for improvement 
+There are also social applications for such a project, such as AI interactions with humans. If we could accurately predict human expressions and emotions using computer vision, we could create virtual therapists that can correctly analyze facial expressions. There could also be further implementations of this in neurotech and ML. In fact, this already exists today, in the form of algorithms that analyze the level of motivation for stroke patients undergoing therapy.
+
+Model 4 performed the best with the highest testing accuracy of 44.362%. If we had more computing power, we would have run the model on the entire dataset which might further improved the testing accuracy. Since the dataset was huge, it was not feasible for us to do that.
 
 
 ## Collaboration
