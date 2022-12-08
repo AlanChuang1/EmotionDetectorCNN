@@ -200,7 +200,15 @@ The ‘history’ object with .fit() stores all the training metrics for every e
 
 ### Retrieving Accuracy for a Model 
 
-- Talk about getAccuracy(model)  
+```python
+def getAccuracy(model):
+    train_loss, train_ACC = model.evaluate(train_generator)
+    test_loss, test_ACC   = model.evaluate(valid_generator)
+    print("The train accuracy = {:.3f} , test accuracy = {:.3f}".format(train_ACC*100, test_ACC*100))
+```
+
+- The function getAccuracy() evaluates the performance of the models. It prints out the final training and test accuracy obtained by the models. 
+
 
 
 ## Results
