@@ -180,7 +180,7 @@ We also removed disgust from the dataset as it's small compared to the rest of t
 Flow_from_dataframe is specifically used because flow_from_directory is designed for datasets that have sub-directories (FER-2013) for each class, and we use a single data frame containing all the images.
 
 
-###Preprocessing 
+### Preprocessing 
 
 Since all images were already the same size of 48x48 pixels, we did not further crop them. We decided to flip some images horizontally and rescale them. Normalization of the image pixels was important for classification, so the RGB coefficients were normalized to be within the range of 0 and 1. We chose grayscale images in order to ease classification. Ultimately, we could have added a shift for the width and height of the images in order to properly capture the face’s emotion for classification, or even add a zoom range. While running several iterations of models, we discovered that not only did it consume more time per epoch during training, but it also lowered validation accuracy significantly. Hence, we opted for a more simple preprocessed data set. 
 
