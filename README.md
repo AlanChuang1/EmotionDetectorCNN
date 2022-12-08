@@ -227,6 +227,7 @@ Disgust class is removed from the dataset and will not be used in training the m
 
 ![image](https://github.com/grishaab/MLProjectG4/blob/final/images/results3.png)
 
+
 All models ran for 40 epochs using the same training and validation generator from preprocessed data. 
 
 ### Model 1
@@ -274,7 +275,6 @@ Since all images were already the same size of 48x48 pixels, we did not further 
 
 
 ## Conclusion
------ empty -----
 
 Extended application: train the model on additional expressions that are more intricate.
 Real time prediction of facial expressions can be done
