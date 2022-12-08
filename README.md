@@ -51,7 +51,7 @@ There are 4,254 observations in the dataset, with 1774 happy observations, 1233 
 
 Here we are creating a dataframe by going through the directory and setting each image with its corresponding expression and storing that in a pandas dataset which is going to be returned by the function. We use the returned dataset to display the number of samples for each expression in our train and test dataset.  
 
-![dataeval.png]
+![image](https://github.com/grishaab/MLProjectG4/blob/main/images/dataeval.png)
 
 ### Preprocessing
 
