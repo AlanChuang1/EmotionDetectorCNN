@@ -4,7 +4,7 @@ Group Project for ECS 171, Fall Quarter 2022, at UC Davis under Dr. Solares.
 
 Below is a link to our entire project notebook in Google Colab. We also have code blocks for certain sections located throughout this write-up
 
-[![Open Entire Project Notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1mFxnk88tvQjZwlSB8vthuq_pnYSQRe-D?usp=sharing)
+[![Open Entire Project Notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1wUGX63LLKTMlcHC3DmVnRz_YpGaTL8Dp?usp=sharing)
 
 
 ## Group Members:
