@@ -2,7 +2,7 @@
 
 Group Project for ECS 171, Fall Quarter 2022, at UC Davis under Dr. Solares.
 
-[![Open In Colab](https://colab.research.google.com/drive/1wUGX63LLKTMlcHC3DmVnRz_YpGaTL8Dp?usp=sharing)
+[![Open In Colab]([https://colab.research.google.com/drive/1wUGX63LLKTMlcHC3DmVnRz_YpGaTL8Dp?usp=sharing](https://colab.research.google.com/drive/1wUGX63LLKTMlcHC3DmVnRz_YpGaTL8Dp?usp=sharing))
 
 
 ## Group Members:
