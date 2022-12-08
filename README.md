@@ -40,6 +40,12 @@ Group Project for ECS 171, Fall Quarter 2022, at UC Davis under Dr. Solares.
 
 ## Methods
 
+## How to Access Kaggle Datasets
+
+- Please follow this tutorial to add kaggle dataset to google colab
+
+- https://medium.com/unpackai/how-to-use-kaggle-datasets-in-google-colab-f9b2e4b5767c
+
 ### Data Exploration
 
 - There are 4,254 observations in the dataset, with 1774 happy observations, 1233 neutral observations, and 1247 sad observations. Each “observation”, or image file, is a 48x48 pixel-sized grayscale image of expressions on faces. Sizes are all standardized, so they don’t need to be cropped or require further changes. 
@@ -306,14 +312,50 @@ firstModel = model.fit_generator(generator=train_generator,
 
 - Ultimately, we could have added a shift for the width and height of the images in order to properly capture the face’s emotion for classification, or even add a zoom range. While running several iterations of models, we discovered that not only did it consume more time per epoch during training, but it also lowered validation accuracy significantly. Hence, we opted for a more simple preprocessed data set. 
 
+### Model 1
 
-### Model Optimizers
+- Model 1 had a barebones CNN structure: convolutional layers, pooling layers, and fully connected (dense) layers. 
 
-- We used the Adam optimizer for Model 1 since it works well with a large dataset such as ours.
+- The convolutional layers extract features from the image through a smaller kernel matrix over the image matrix. We decided to use 2 Conv2D layers, both with 32 filters to specify the depth of the feature map. 
 
-- We start with a relu function because its the well suited for CNNs.
+- After some research, we concluded that the most optimal kernel matrix size was (3,3). We added padding such that it adds zeros to become the size of the feature map. Relu was the best activation function for this context because it is generally used for each convolutional layer. 
 
-- After adding the Convolutional layers, we need to flatten them and then add the dense layers. Otherwise, it would result in a dimension mismatch
+- Convolution layers and pooling layers are usually paired together. We used max pooling over average pooling in order to retrieve the maximum pixel value of each batch and focus on the brighter pixels. Generally, the pool size (2,2) was the most common in CNNs. 
+
+- We chose to add three dense layers with decreasing numbers of units. After playing around with different activation functions, we settled on relu, sigmoid, and softmax as the combination of the three performed better. 
+
+- We went with an Adam optimizer and a loss function of categorical cross-entropy which optimized accuracy. 
+
+- It is important to note that we used fit_genator() which is currently deprecated. For a future version, it should be replaced with fit(), passing the generators within the parameters. 
+
+- Reflecting on this model, it was very basic and performed adequately. The testing accuracy was low and the training accuracy was very high, which indicated the overfitting of the model. 
+
+### Model 2
+
+- Model 2 incorporated more layers in order to make the CNN more complex in hopes of better accuracy. After fitting the model and evaluating, it did perform better than Model 1.
+
+- Overfitting is still a really big issue, since it shot up to 98% compared to the former 92%. This means that more layers actually contributed to the overfitting problem, but also improved testing accuracy. 
+
+### Model 3
+
+- In order to address the overfitting issue, we added batch normalization and dropout which should normalize the inputs and prepare them for the next layer. 
+
+- This model actually performed the best, it lowered the training accuracy (indicating the overfitting problem was slightly reduced) and improved the testing accuracy significantly. 
+
+
+### Model 4
+
+- Added more layers 
+
+- Overall didn’t improve with testing accuracy nor did it help solve the overfitting problem 
+
+### Model 5
+
+- Added regularizers to optimize the loss function in order to improve the testing accuracy
+
+- Helped solve the overfitting problem significantly! 
+
+- Didn’t necessarily improve testing accuracy, but that could be due to limitations in the training set since in theory it should do better.
 
 
 ## Conclusion
