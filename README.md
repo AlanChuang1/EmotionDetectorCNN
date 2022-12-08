@@ -137,6 +137,64 @@ train_generator = datagen.flow_from_dataframe(
 
 ```
 
+### Model 1
+
+Model 1 was constructed with a simple CNN structure using a Keras Sequential model from TensorFlow, which groups layers of the model linearly and provides loss and accuracy values for our training and validation datasets. 
+
+For our convolutional layer, we used Conv2D to conduct spatial convolution over images to extract features from our images in the training dataset. For our pooling layer, we used MaxPooling2D to downsample the input.
+
+- Conv2d 
+- Maxpooling 2d 
+- Flatten 
+- Dense 
+- Compile 
+- Fit_generator 
+- Adam()
+
+### Model 2
+
+- No new methods, more layers were added 
+
+### Model 3
+
+- batch Normalization() 
+- Dropout 
+
+### Model 4
+
+- No new methods, more layers were added 
+
+### Model 5
+
+- Regularizers 
+
+### Plotting Results
+
+```python
+def plotValidationLossAccuracy(model):
+    figure, axis = plt.subplots(1,2)
+    figure.set_size_inches(16,6)
+
+    train_ACC = model.history['accuracy']
+    train_loss = model.history['loss']
+
+    axis[0].plot(model.history['accuracy'], color = "green")
+    axis[0].plot(model.history['val_accuracy'])
+    axis[0].set_xlabel('Number of Epochs')
+    axis[0].set_ylabel('Accuracy values')
+    axis[0].set_title('Training against Validation Accuracy')
+    axis[0].legend(['Train', 'Test'], loc = 'lower left')
+
+    axis[1].plot(model.history['loss'], color = "green")
+    axis[1].plot(model.history['val_loss'])
+    axis[1].set_title('Training against Validation Loss')
+    axis[1].set_xlabel('Number of Epochs')
+    axis[1].set_ylabel('Loss Values')
+    axis[1].set_title('Training against Validation Loss')
+    axis[1].legend(['Train', 'Test'], loc ='lower left')
+
+    plt.show()
+```
 
 ## Results
 
@@ -200,3 +258,24 @@ Flow_from_dataframe is specifically used because flow_from_directory is designed
 Since all images were already the same size of 48x48 pixels, we did not further crop them. We decided to flip some images horizontally and rescale them. Normalization of the image pixels was important for classification, so the RGB coefficients were normalized to be within the range of 0 and 1. We chose grayscale images in order to ease classification. Ultimately, we could have added a shift for the width and height of the images in order to properly capture the face’s emotion for classification, or even add a zoom range. While running several iterations of models, we discovered that not only did it consume more time per epoch during training, but it also lowered validation accuracy significantly. Hence, we opted for a more simple preprocessed data set. 
 
 
+## Conclusion
+----- empty -----
+
+Extended application: train the model on additional expressions that are more intricate.
+Real time prediction of facial expressions can be done
+
+Talk about which model did the best 
+Talk about dataset being hard and not the best accuracy for us + there’s always room for improvement 
+
+
+## Collaboration
+
+Alan Chuang: I worked on composing parts of the writeup as well as the finial formatting, and also did some initial debugging. We all worked towards setting up meetings and meeting deadlines, and contributed equally to complete this project, which was a great learning opportunity!
+
+Daksh Jain: I was responsible partially for coding, debugging, and communicating with team members to set up meetings and manage deadlines. I also worked on the write up introduction and Methods section. We split tasks evenly and helped each other when needed. I believe everyone in the group worked hard and together as a team!
+
+Sohum Goel: I was responsible for the initial setup of the neural network, along with some trial runs. We added to each other's work. Everyone worked together to complete this project.
+
+Grisha Bandodkar: I mainly worked on training and running multiple iterations of the model such that it could get the best possible accuracy results. I contributed towards the results, discussion, and conclusion sections of the write up. Everyone contributed equally toward this project. 
+
+Arnav Rastogi: I worked largely on the write-up, but also partially on debugging and organizing the repository, along with coordinating with team members to manage milestone deadlines and fix meeting times. We all contributed equally, coordinated well, and worked together on this project
